@@ -10,7 +10,7 @@ I am especially interested in Large Language Models, AI agents, evaluation syste
 
 [![JudgeShift CX results dashboard](https://raw.githubusercontent.com/ruimiguelyo/judgeshift-cx/main/.github/assets/dashboard.png?v=9993e42)](https://ruimiguelyo.github.io/judgeshift-cx/)
 
-I built **JudgeShift CX** to test when an LLM can be trusted to evaluate customer-support responses — and when uncertainty or response-order sensitivity should force it to abstain.
+**JudgeShift CX** grew out of a problem I had running my Etsy store: if I eventually want AI to help answer customer messages, how do I know which AI-generated responses are actually safe and useful enough to send? I built a bilingual, human-grounded test bench to investigate that question.
 
 [Explore my results dashboard](https://ruimiguelyo.github.io/judgeshift-cx/) · [Read my source code](https://github.com/ruimiguelyo/judgeshift-cx) · [View my v0.1.0 release](https://github.com/ruimiguelyo/judgeshift-cx/releases/tag/v0.1.0)
 
