@@ -16,32 +16,15 @@ I am especially interested in Large Language Models, AI agents, evaluation syste
 
 ### Why I built it
 
-I run an Etsy store, and one recurring problem is keeping up with customer messages. That made me interested in building a system that could understand an incoming support request and help select or generate an appropriate reply.
+I run an Etsy store and sometimes struggle to keep up with customer messages. That made me think about building a system that could understand a request and automatically select or generate an appropriate reply.
 
-But before letting an AI system respond to real customers automatically, I ran into a more fundamental question:
+Before letting AI respond to real customers, though, I wanted to answer a more important question: how do I know the reply it chooses is actually good?
 
-How do I know that the response it chooses is actually good enough to send?
+That led me to build JudgeShift CX, a small experiment comparing different LLM evaluation strategies across English and Portuguese customer-support responses. The goal was to test not only whether a judge picks the preferred answer, but also whether it remains reliable under position changes, ambiguity, and simple dataset biases.
 
-That question became **JudgeShift CX**.
+One early result showed why this matters: a basic length heuristic initially achieved perfect accuracy simply because the preferred answers were longer. I added a verbosity stress test to expose that weakness.
 
-Rather than building the auto-reply system first, I focused on the evaluation layer: testing whether an LLM can reliably distinguish between better and worse customer-support responses, whether that judgment holds across English and Portuguese, and whether the system can recognize cases where it should not make the decision automatically.
-
-“LLM-as-a-judge” is easy to demo and surprisingly hard to trust. A high aggregate score can hide position bias, language drift, label ambiguity, and failures on security-sensitive support conversations. I wanted a small experiment that exposes those failure modes rather than another wrapper around an API.
-
-The longer-term product idea looks something like this:
-
-Customer message → understand intent → generate/select candidate replies → evaluate response quality → auto-reply when confidence is high → human review when it isn't.
-
-JudgeShift CX focuses deliberately on the evaluation part of that pipeline.
-
-It compares four evaluation strategies on the same 36 response pairs:
-
-a deliberately weak length baseline;
-a single-pass holistic LLM judge;
-a dimension-by-dimension rubric judge;
-a selective rubric judge that evaluates both response orders and abstains when the normalized answer changes.
-
-The goal is not to claim that an LLM can safely automate customer support. It is to study one of the pieces I would want in place before trusting such a system with real customer conversations.
+The project ultimately became an evaluation layer for a broader customer-support automation idea: automate when confidence is high, and abstain when it is not.
 
 ### What I built
 
