@@ -14,9 +14,34 @@ I am especially interested in Large Language Models, AI agents, evaluation syste
 
 [Explore my results dashboard](https://ruimiguelyo.github.io/judgeshift-cx/) · [Read my source code](https://github.com/ruimiguelyo/judgeshift-cx) · [View my v0.1.0 release](https://github.com/ruimiguelyo/judgeshift-cx/releases/tag/v0.1.0)
 
-### The problem I chose to investigate
+### Why I built it
 
-I did not want to build another thin wrapper around an LLM API. I wanted to investigate a harder question: if I use one AI system to grade another, how do I know that the grader agrees with documented human or policy references rather than following shortcuts such as response length, answer order, or language?
+I run an Etsy store, and one recurring problem is keeping up with customer messages. That made me interested in building a system that could understand an incoming support request and help select or generate an appropriate reply.
+
+But before letting an AI system respond to real customers automatically, I ran into a more fundamental question:
+
+How do I know that the response it chooses is actually good enough to send?
+
+That question became **JudgeShift CX**.
+
+Rather than building the auto-reply system first, I focused on the evaluation layer: testing whether an LLM can reliably distinguish between better and worse customer-support responses, whether that judgment holds across English and Portuguese, and whether the system can recognize cases where it should not make the decision automatically.
+
+“LLM-as-a-judge” is easy to demo and surprisingly hard to trust. A high aggregate score can hide position bias, language drift, label ambiguity, and failures on security-sensitive support conversations. I wanted a small experiment that exposes those failure modes rather than another wrapper around an API.
+
+The longer-term product idea looks something like this:
+
+Customer message → understand intent → generate/select candidate replies → evaluate response quality → auto-reply when confidence is high → human review when it isn't.
+
+JudgeShift CX focuses deliberately on the evaluation part of that pipeline.
+
+It compares four evaluation strategies on the same 36 response pairs:
+
+a deliberately weak length baseline;
+a single-pass holistic LLM judge;
+a dimension-by-dimension rubric judge;
+a selective rubric judge that evaluates both response orders and abstains when the normalized answer changes.
+
+The goal is not to claim that an LLM can safely automate customer support. It is to study one of the pieces I would want in place before trusting such a system with real customer conversations.
 
 ### What I built
 
