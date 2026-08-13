@@ -1,74 +1,97 @@
 # Hi, I'm Rui Sá
 
-**SAP & ABAP Developer · Computer Engineering student · AI Engineering focus · Setúbal, Portugal**
+**I have 4.5 years of SAP and ABAP experience, I am completing a BSc in Computer Engineering, and I am building my path into AI Engineering.**
 
-I am a software developer with approximately 4.5 years of professional experience at Deloitte, working mainly with SAP, ABAP development, and SAP functional analysis.
+I spent approximately 4.5 years at Deloitte working with SAP, ABAP development, functional analysis, requirements, debugging, testing, and technical documentation. I am currently completing my Computer Engineering degree at the Polytechnic Institute of Setúbal, with graduation expected in 2027.
 
-My experience combines technical development, requirements clarification, troubleshooting, testing, documentation, and collaboration with business and technical teams. I am currently completing a BSc in Computer Engineering at the Polytechnic Institute of Setúbal, expected in 2027, after completing a CTeSP in Software Engineering in 2023.
+I am especially interested in Large Language Models, AI agents, evaluation systems, NLP, and intelligent automation. I like projects where I can measure whether an AI system is genuinely reliable instead of stopping when the demo looks convincing.
 
-I am passionate about Artificial Intelligence and regularly build personal projects and experiments involving Generative AI, Large Language Models, AI agents, Retrieval-Augmented Generation, and intelligent automation. My goal is to combine my enterprise software background with modern AI technologies to build practical and scalable intelligent systems.
+## My featured project: JudgeShift CX
 
-## Current focus
+[![JudgeShift CX results dashboard](https://raw.githubusercontent.com/ruimiguelyo/judgeshift-cx/main/.github/assets/dashboard.png)](https://ruimiguelyo.github.io/judgeshift-cx/)
 
-- SAP and ABAP development.
-- SAP functional analysis and enterprise problem-solving.
-- Generative AI and Large Language Models.
-- AI agents, RAG, tool integration, and intelligent automation.
-- Applying software engineering practices to reliable AI-powered solutions.
+I built **JudgeShift CX** to test when an LLM can be trusted to evaluate customer-support responses — and when uncertainty or response-order sensitivity should force it to abstain.
 
-## Professional experience
+[Explore my results dashboard](https://ruimiguelyo.github.io/judgeshift-cx/) · [Read my source code](https://github.com/ruimiguelyo/judgeshift-cx) · [View my v0.1.0 release](https://github.com/ruimiguelyo/judgeshift-cx/releases/tag/v0.1.0)
 
-### Deloitte - Developer, SAP ABAP & Functional Analysis
+### The problem I chose to investigate
 
-**October 2021 - March 2026 · Portugal · Hybrid · Full-time**
+I did not want to build another thin wrapper around an LLM API. I wanted to investigate a harder question: if I use one AI system to grade another, how do I know that the grader agrees with documented human or policy references rather than following shortcuts such as response length, answer order, or language?
 
-- Developed and maintained enterprise SAP solutions in ABAP from functional requirements.
-- Worked across technical development and functional analysis, clarifying business needs and assessing impacts within SAP.
-- Investigated incidents and defects through debugging and root-cause analysis.
-- Prepared and executed tests, documented changes, and supported validation with business and technical stakeholders.
-- Collaborated with multidisciplinary teams throughout structured delivery cycles.
+### What I built
 
-## AI & personal projects
+- I curated a golden dataset with **36 customer-support evaluations organised into 18 English and Portuguese (Portugal) pairs**.
+- I documented the provenance behind every reference, including controlled policy cases, six English HelpSteer3 human-preference examples, and clearly labelled Portuguese preference transfers.
+- I compared a deliberately weak length baseline, a holistic LLM judge, a dimension-by-dimension rubric judge, and a selective rubric policy that abstains when the decision changes after reversing response order.
+- I ran the LLM judges locally with **Qwen3-4B-Instruct-2507**, greedy decoding, a frozen model revision, and no remote inference API.
+- I evaluated every pair in its original and reversed A/B order so I could normalize the chosen response and measure position sensitivity.
+- I measured reference agreement, coverage, end-to-end accuracy, Cohen's kappa, Wilson confidence intervals, order-flip rate, parser repairs, and cross-language consistency.
+- I added a Braintrust-compatible evaluation entry point without making a hosted Braintrust account necessary to reproduce my results.
+- I built a responsive React and TypeScript dashboard that reads directly from the committed experiment artifacts and lets me inspect every decision case by case.
 
-I use personal projects to expand my knowledge of AI Engineering and intelligent software systems. My current learning and project areas include:
+### What I found
 
-- Generative AI and LLM-based applications.
-- AI agents and tool-enabled workflows.
-- Retrieval-Augmented Generation and context design.
-- Intelligent automation for practical problems.
-- Testing, evaluation, documentation, and responsible system boundaries.
+| Strategy | Golden-set result | Targeted verbosity stress result |
+| --- | ---: | ---: |
+| Length baseline | 100.0% agreement | **0.0% agreement** |
+| Holistic judge | 88.9% agreement | 94.4% agreement |
+| Rubric judge | 94.4% agreement | 97.2% agreement |
+| Selective rubric | **100.0% agreement at 86.1% coverage** | **100.0% agreement at 91.7% coverage** |
 
-## Side project - SplitFX
+I found that the apparently perfect length baseline was actually exposing a dataset confound: every preferred response in the original set happened to be at least as long as its alternative. I kept that uncomfortable result and designed a targeted stress test that pads only the losing response until it becomes longer. The baseline immediately collapsed from 100% to 0%.
 
-[![SplitFX side project preview](https://raw.githubusercontent.com/ruimiguelyo/splitfx/main/public/social-card.png)](https://ruimiguelyo.github.io/splitfx/)
+That is the result I value most in this project. I did not treat a perfect metric as a success until I understood why it was perfect. The experiment gave me evidence that a rubric-based judge was more robust to this shortcut, while the selective policy showed the practical trade-off between higher conditional agreement and lower coverage.
 
-SplitFX is a personal side project, separate from my professional SAP experience. It is a cross-currency group expense and settlement prototype built with React, TypeScript, Redux Toolkit, and a test-focused development approach.
+I describe the verbosity perturbation honestly as a label-informed, targeted stress test rather than an independent benchmark. I also document the small sample size, wide confidence intervals, transferred Portuguese labels, and limits of the human-preference subset instead of presenting the study as a universal measure of support quality.
 
-- Models currencies in integer minor units and uses deterministic rounding.
-- Calculates balances and settlement suggestions through typed state and selectors.
-- Represents loading, fresh, expired, offline, and error quote states using fixed demo rates.
-- Includes automated tests and documented product and technical boundaries.
+### How I made it reproducible
 
-**Prototype boundary:** SplitFX uses fictional demo data and fixed demo exchange rates. It does not connect to a bank, fetch market rates, or move money.
+- I committed the golden dataset, all **432 presentation-level decisions**, raw judge outputs, generated reports, and both base and stress-test artifacts.
+- I recorded the exact dataset hash, source revision, model revision, prompt versions, decoding settings, Python environment, CUDA version, and GPU used for the run.
+- I made metric rebuilding and Braintrust replay possible without rerunning the model or supplying an API key.
+- I added **21 automated tests**, dataset and artifact-integrity checks, strict typing, formatting, linting, and a **75% minimum coverage gate**; the verified release reached **77.66% coverage**.
+- I configured separate GitHub Actions pipelines for the Python evaluation system and the TypeScript dashboard, including automatic GitHub Pages deployment.
+- I published methodology, dataset, model, results, limitations, security, contribution, licensing, and portfolio documentation alongside the code.
 
-[View the repository](https://github.com/ruimiguelyo/splitfx) · [Open the live prototype](https://ruimiguelyo.github.io/splitfx/)
+### What I used
 
-## Education
+I used **Python, Pydantic, scikit-learn, PyTorch, Transformers, Qwen, Braintrust, React, TypeScript, Vite, GitHub Actions, and GitHub Pages**.
 
-| Period | Education |
-| --- | --- |
-| Expected 2027 | BSc in Computer Engineering, Polytechnic Institute of Setúbal |
-| 2021 - 2023 | CTeSP in Software Engineering, Polytechnic Institute of Setúbal |
+[Read my methodology](https://github.com/ruimiguelyo/judgeshift-cx/blob/main/docs/METHODOLOGY.md) · [Inspect my results analysis](https://github.com/ruimiguelyo/judgeshift-cx/blob/main/docs/RESULTS.md) · [Review my limitations](https://github.com/ruimiguelyo/judgeshift-cx/blob/main/docs/LIMITATIONS.md)
+
+## My professional background
+
+### Deloitte — Developer, SAP ABAP & Functional Analysis
+
+**October 2021 – March 2026 · Portugal · Hybrid · Full-time**
+
+- I developed and maintained enterprise SAP solutions in ABAP from functional requirements.
+- I worked across technical development and functional analysis, clarifying business needs and assessing impacts within SAP.
+- I investigated incidents and defects through debugging and root-cause analysis.
+- I prepared and executed tests, documented changes, and supported validation with business and technical stakeholders.
+- I collaborated with multidisciplinary teams throughout structured delivery cycles.
+
+## What I am focusing on now
+
+- I am deepening my practical knowledge of LLM evaluation, NLP, AI agents, RAG, and tool-enabled workflows.
+- I am applying software-engineering practices to AI systems whose behaviour, evidence, and limitations I can explain.
+- I am continuing to learn Python, machine learning, data analysis, JavaScript, TypeScript, and SQL through my degree and personal work.
+- I am looking for opportunities where I can combine my enterprise background with hands-on AI Engineering.
+
+## My education
+
+- I expect to complete my **BSc in Computer Engineering at the Polytechnic Institute of Setúbal in 2027**.
+- I completed my **CTeSP in Software Engineering at the Polytechnic Institute of Setúbal in 2023**.
 
 ## What I value
 
-- Clear communication between business and technical teams.
-- Structured requirements, debugging, testing, and documentation.
-- Practical AI systems with understandable behaviour and boundaries.
-- Continuous learning and honest communication about trade-offs.
+- I value clear communication between technical and business teams.
+- I value requirements, debugging, testing, documentation, and reproducible evidence.
+- I prefer honest limitations and measurable behaviour to claims that a system is simply “intelligent”.
+- I enjoy learning new technologies by building something concrete and then testing where it fails.
 
 ## Contact
 
-- [LinkedIn](https://www.linkedin.com/in/rui-s%C3%A1-1243162ab/)
+You can find me on [LinkedIn](https://www.linkedin.com/in/rui-s%C3%A1-1243162ab/).
 
-I am interested in opportunities where I can combine enterprise software experience with modern AI technologies to build useful, reliable, and scalable systems.
+I am interested in Machine Learning and AI Engineering opportunities where I can help build useful, understandable, and reliable systems.
