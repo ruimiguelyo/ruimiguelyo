@@ -57,25 +57,20 @@ I describe the verbosity perturbation honestly as a label-informed, targeted str
 
 I used **Python, Pydantic, scikit-learn, PyTorch, Transformers, Qwen, Braintrust, React, TypeScript, Vite, GitHub Actions, and GitHub Pages**.
 
-### Evaluation foundations I studied
+### Evaluation foundations I studied and helped me build this
+A lot of what I learned while building this project came from Braintrust's material and videos.
 
-I learned the evaluation workflow behind JudgeShift CX by working through Braintrust's practical
-material and then applying the ideas to a complete, inspectable project:
+I started with their content on evals and LLM-as-a-judge, then searched for other ways to measure agreement between the judges and the expected results. That's how I ended up using Cohen's kappa from scikit-learn, which made more sense for what I wanted to measure than just looking at accuracy.
 
-- [Intro to Evals with Braintrust](https://www.youtube.com/watch?v=9uEay1jQM3w) — datasets,
-  prompts, scorers, and the end-to-end evaluation loop.
-- [Evals 101](https://www.youtube.com/watch?v=bk0TmxoZlUY) — offline and online evaluation,
-  logging, and the discipline of replayable experiments.
-- [Braintrust Evals documentation](https://www.braintrust.dev/docs/evaluate) — systematic
-  evaluations with custom scorers and code-defined experiments.
-- [What is an LLM-as-a-judge?](https://www.braintrust.dev/articles/what-is-llm-as-a-judge) —
-  judge prompts, criteria, and the risks of using one model to evaluate another.
+These were some of the resources that helped me:
 
-I connected those ideas to my own implementation: I versioned the golden dataset and prompts,
-ran deterministic local evaluations, added custom metrics and a Braintrust-compatible replay
-entry point, and tested whether the judge changed its decision when I reversed the response
-order. The result is documented in the [JudgeShift CX repository](https://github.com/ruimiguelyo/judgeshift-cx),
-not just shown as a polished demo.
+- [Intro to Evals with Braintrust](https://www.youtube.com/watch?v=9uEay1jQM3w)
+- [Evals 101](https://www.youtube.com/watch?v=bk0TmxoZlUY)
+- [Braintrust Evals documentation](https://www.braintrust.dev/docs/evaluate)
+- [What is an LLM-as-a-judge?](https://www.braintrust.dev/articles/what-is-llm-as-a-judge)
+- [Cohen's kappa — scikit-learn](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.cohen_kappa_score.html)
+
+From there I kept experimenting and adding things as I ran into problems or questions while building the project.
 
 [Read my methodology](https://github.com/ruimiguelyo/judgeshift-cx/blob/main/docs/METHODOLOGY.md) · [Inspect my results analysis](https://github.com/ruimiguelyo/judgeshift-cx/blob/main/docs/RESULTS.md) · [Review my limitations](https://github.com/ruimiguelyo/judgeshift-cx/blob/main/docs/LIMITATIONS.md)
 
