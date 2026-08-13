@@ -8,7 +8,7 @@ I am especially interested in Large Language Models, AI agents, evaluation syste
 
 ## My featured project: JudgeShift CX
 
-[![JudgeShift CX results dashboard](https://raw.githubusercontent.com/ruimiguelyo/judgeshift-cx/main/.github/assets/dashboard.png)](https://ruimiguelyo.github.io/judgeshift-cx/)
+[![JudgeShift CX results dashboard](https://raw.githubusercontent.com/ruimiguelyo/judgeshift-cx/main/.github/assets/dashboard.png?v=9993e42)](https://ruimiguelyo.github.io/judgeshift-cx/)
 
 I built **JudgeShift CX** to test when an LLM can be trusted to evaluate customer-support responses — and when uncertainty or response-order sensitivity should force it to abstain.
 
@@ -56,6 +56,26 @@ I describe the verbosity perturbation honestly as a label-informed, targeted str
 ### What I used
 
 I used **Python, Pydantic, scikit-learn, PyTorch, Transformers, Qwen, Braintrust, React, TypeScript, Vite, GitHub Actions, and GitHub Pages**.
+
+### Evaluation foundations I studied
+
+I learned the evaluation workflow behind JudgeShift CX by working through Braintrust's practical
+material and then applying the ideas to a complete, inspectable project:
+
+- [Intro to Evals with Braintrust](https://www.youtube.com/watch?v=9uEay1jQM3w) — datasets,
+  prompts, scorers, and the end-to-end evaluation loop.
+- [Evals 101](https://www.youtube.com/watch?v=bk0TmxoZlUY) — offline and online evaluation,
+  logging, and the discipline of replayable experiments.
+- [Braintrust Evals documentation](https://www.braintrust.dev/docs/evaluate) — systematic
+  evaluations with custom scorers and code-defined experiments.
+- [What is an LLM-as-a-judge?](https://www.braintrust.dev/articles/what-is-llm-as-a-judge) —
+  judge prompts, criteria, and the risks of using one model to evaluate another.
+
+I connected those ideas to my own implementation: I versioned the golden dataset and prompts,
+ran deterministic local evaluations, added custom metrics and a Braintrust-compatible replay
+entry point, and tested whether the judge changed its decision when I reversed the response
+order. The result is documented in the [JudgeShift CX repository](https://github.com/ruimiguelyo/judgeshift-cx),
+not just shown as a polished demo.
 
 [Read my methodology](https://github.com/ruimiguelyo/judgeshift-cx/blob/main/docs/METHODOLOGY.md) · [Inspect my results analysis](https://github.com/ruimiguelyo/judgeshift-cx/blob/main/docs/RESULTS.md) · [Review my limitations](https://github.com/ruimiguelyo/judgeshift-cx/blob/main/docs/LIMITATIONS.md)
 
