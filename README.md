@@ -82,6 +82,14 @@ From there I kept experimenting and adding things as I ran into problems or ques
 
 [Read my methodology](https://github.com/ruimiguelyo/judgeshift-cx/blob/main/docs/METHODOLOGY.md) · [Inspect my results analysis](https://github.com/ruimiguelyo/judgeshift-cx/blob/main/docs/RESULTS.md) · [Review my limitations](https://github.com/ruimiguelyo/judgeshift-cx/blob/main/docs/LIMITATIONS.md)
 
+## Additional project: JAX Language Model Lab
+
+[Read the repository](https://github.com/ruimiguelyo/jax-language-model-lab)
+
+I implemented a small decoder-only Transformer in JAX and Flax, trained it on a public text corpus, and ran a controlled continual-pretraining experiment comparing sequential adaptation, reservoir replay, and a joint-training reference under a fixed token budget.
+
+The repository includes checkpoint resume, causal-mask and gradient tests, real perplexity curves, reservoir sampling, and reproducible experiment artifacts.
+
 ## My professional background
 
 ### Deloitte — Developer, SAP ABAP & Functional Analysis
