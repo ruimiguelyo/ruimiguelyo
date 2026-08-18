@@ -1,101 +1,168 @@
-# Hi, I'm Rui Sa
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="./assets/profile-header.svg">
+    <source media="(prefers-color-scheme: light)" srcset="./assets/profile-header.svg">
+  <img src="./assets/profile-header.svg" alt="Rui Sá - AI engineering, LLM evaluation and reliable systems" width="100%">
+  </picture>
+</p>
 
-I have 4.5 years of SAP and ABAP experience, I am completing a BSc in Computer Engineering, and I am building my path into AI Engineering.
+<p align="center">
+  <a href="https://www.linkedin.com/in/rui-s%C3%A1-1243162ab/"><img src="https://img.shields.io/badge/LinkedIn-connect-0B1627?style=for-the-badge&logo=linkedin&logoColor=F8FAFC&labelColor=E8B4CA" alt="Connect on LinkedIn"></a>
+  <a href="mailto:ruimiguelsa.stb@gmail.com"><img src="https://img.shields.io/badge/Email-say%20hello-0B1627?style=for-the-badge&logo=gmail&logoColor=F8FAFC&labelColor=93D8E8" alt="Send Rui an email"></a>
+  <a href="https://github.com/ruimiguelyo"><img src="https://img.shields.io/badge/GitHub-ruimiguelyo-0B1627?style=for-the-badge&logo=github&logoColor=F8FAFC&labelColor=F4C95D" alt="Rui's GitHub profile"></a>
+</p>
 
-I spent approximately 4.5 years at Deloitte working with SAP, ABAP development, functional analysis, requirements, debugging, testing, and technical documentation. I am currently completing my Computer Engineering degree at the Polytechnic Institute of Setubal, with graduation expected in 2027.
+<p align="center">
+  <a href="#what-i-build">what I build</a> &nbsp;&middot;&nbsp;
+  <a href="#featured-work">featured work</a> &nbsp;&middot;&nbsp;
+  <a href="#toolbox">toolbox</a> &nbsp;&middot;&nbsp;
+  <a href="#contact">contact</a>
+</p>
 
-I am especially interested in language models, evaluation systems, NLP, and AI engineering. I prefer projects where the model behaviour, measurements, and limitations can be inspected directly.
+<h2 id="what-i-build">A bridge between enterprise software and inspectable AI</h2>
 
-## Featured project: JAX Language Model Lab
+<p>
+  I am <strong>Rui Sá</strong>, a Computer Engineering student in Setúbal, Portugal, moving deliberately into AI Engineering. I spent 4.5 years at Deloitte building and debugging SAP/ABAP systems, and I now apply that same discipline to language models: define the question, control the comparison, measure the behaviour, and document the limits.
+</p>
 
-[Read the repository](https://github.com/ruimiguelyo/jax-language-model-lab)
+<blockquote>
+  <strong>I build AI systems that can be inspected from the metric to the mechanism.</strong>
+</blockquote>
 
-[![General-domain validation perplexity](https://raw.githubusercontent.com/ruimiguelyo/jax-language-model-lab/main/results/continual/figures/general_perplexity.png)](https://github.com/ruimiguelyo/jax-language-model-lab)
+<table>
+  <tr>
+    <td align="center" width="25%"><strong>4.5 years</strong><br><sub>enterprise software</sub></td>
+    <td align="center" width="25%"><strong>3.3M</strong><br><sub>model parameters</sub></td>
+    <td align="center" width="25%"><strong>36 cases</strong><br><sub>bilingual evaluation set</sub></td>
+    <td align="center" width="25%"><strong>10 tests</strong><br><sub>JAX lab checks</sub></td>
+  </tr>
+</table>
 
-After building JudgeShift CX, I wanted to move one layer down. I could evaluate whether a language model's outputs were reliable, but I was still treating model training as a black box.
+<p align="center">
+  <img src="./assets/research-loop.svg" alt="Rui's method: question, control, measure and document" width="100%">
+</p>
 
-That led to a concrete question:
+<h2 id="featured-work">Featured work</h2>
 
-> If a language model learns a new domain continuously, can replay preserve its performance on the original domain when the adaptation token budget is fixed?
+<table>
+  <tr>
+    <td valign="top" width="50%">
+      <h3><a href="https://github.com/ruimiguelyo/jax-language-model-lab">JAX Language Model Lab</a></h3>
+      <p><strong>Decoder-only Transformer &middot; continual pretraining</strong></p>
+      <p>A small language-model training stack built from the mechanism up instead of hiding behind a pretrained API. It compares sequential adaptation, reservoir replay and a joint-training reference under a fixed token budget.</p>
+      <p>
+        <img src="https://img.shields.io/badge/JAX-07111F?style=flat-square&logo=google&logoColor=93D8E8" alt="JAX">
+        <img src="https://img.shields.io/badge/Flax-07111F?style=flat-square&logo=google&logoColor=E8B4CA" alt="Flax">
+        <img src="https://img.shields.io/badge/Optax-07111F?style=flat-square&logoColor=F4C95D" alt="Optax">
+        <img src="https://img.shields.io/badge/Python-07111F?style=flat-square&logo=python&logoColor=F4C95D" alt="Python">
+      </p>
+      <p><a href="https://github.com/ruimiguelyo/jax-language-model-lab">source code&nbsp;↗</a> &nbsp; <a href="https://github.com/ruimiguelyo/jax-language-model-lab/blob/main/README.md#results">results&nbsp;↗</a></p>
+    </td>
+    <td valign="top" width="50%">
+      <h3><a href="https://github.com/ruimiguelyo/judgeshift-cx">JudgeShift CX</a></h3>
+      <p><strong>LLM-as-a-judge evaluation platform</strong></p>
+      <p>A bilingual benchmark and dashboard for testing whether LLM judges can be trusted. It makes order sensitivity, confidence, coverage, cross-language consistency and failure modes visible instead of reducing them to one headline score.</p>
+      <p>
+        <img src="https://img.shields.io/badge/Python-07111F?style=flat-square&logo=python&logoColor=F4C95D" alt="Python">
+        <img src="https://img.shields.io/badge/TypeScript-07111F?style=flat-square&logo=typescript&logoColor=93D8E8" alt="TypeScript">
+        <img src="https://img.shields.io/badge/React-07111F?style=flat-square&logo=react&logoColor=E8B4CA" alt="React">
+        <img src="https://img.shields.io/badge/Braintrust-07111F?style=flat-square&logoColor=F4C95D" alt="Braintrust">
+      </p>
+      <p><a href="https://ruimiguelyo.github.io/judgeshift-cx/">live dashboard&nbsp;↗</a> &nbsp; <a href="https://github.com/ruimiguelyo/judgeshift-cx/releases/tag/v0.1.0">v0.1.0 study&nbsp;↗</a></p>
+    </td>
+  </tr>
+</table>
 
-I built a small decoder-only Transformer in JAX and Flax instead of starting with a pretrained model or an inference API. The repository contains the training loop, checkpointing, evaluation, data packing, reservoir sampling, and the experiment that compares sequential adaptation, reservoir replay, and a joint-training reference.
+<p align="center">
+  <a href="https://github.com/ruimiguelyo/jax-language-model-lab">
+    <img src="https://raw.githubusercontent.com/ruimiguelyo/jax-language-model-lab/main/results/continual/figures/general_perplexity.png" alt="General-domain validation perplexity for the JAX continual-pretraining experiment" width="82%">
+  </a>
+  <br>
+  <sub>One recorded experiment, one CPU device, one seed: the chart stays because honest limitations are part of the result.</sub>
+</p>
 
-### What I built
+<h2>What I am working on</h2>
 
-- A decoder-only Transformer with causal attention, learned positional embeddings, GELU MLP blocks, residual connections, normalization, tied embeddings, and language-modeling loss.
-- A JAX training path using `jax.jit` and `jax.value_and_grad`, with Optax scheduling, clipping, checkpoint save/resume, and JSONL metrics.
-- A fixed GPT-2 tokenizer used consistently across the general and target domains.
-- Tests for output shapes, causal masking, finite losses and gradients, checkpoint resume, data packing, reservoir capacity, and tiny-dataset overfitting.
-- A controlled continual-pretraining setup using WikiText-2 raw as the general corpus and AG News as the target corpus.
-- Online reservoir sampling with a fixed buffer, replay ratio, token budget, initial checkpoint, optimizer, sequence length, and evaluation schedule.
+<table>
+  <tr>
+    <td valign="top" width="50%">
+      <h3>Now / 2026</h3>
+      <ul>
+        <li>Language-model training, evaluation and continual learning.</li>
+        <li>LLM agents with explicit measurements and useful abstention.</li>
+        <li>Reproducible experiments where negative results are still informative.</li>
+      </ul>
+    </td>
+    <td valign="top" width="50%">
+      <h3>Before / 2021&ndash;2026</h3>
+      <ul>
+        <li>Developer at Deloitte working with SAP and ABAP.</li>
+        <li>Functional analysis, requirements, debugging and root-cause work.</li>
+        <li>Testing, technical documentation and multidisciplinary delivery.</li>
+      </ul>
+    </td>
+  </tr>
+</table>
 
-### What I measured
+<h2 id="toolbox">Toolbox</h2>
 
-The recorded run used a 3.3M-parameter model, one CPU device, and one seed.
+<p align="center">
+  <img src="https://img.shields.io/badge/Python-07111F?style=for-the-badge&logo=python&logoColor=F4C95D" alt="Python">
+  <img src="https://img.shields.io/badge/JAX-07111F?style=for-the-badge&logo=google&logoColor=93D8E8" alt="JAX">
+  <img src="https://img.shields.io/badge/PyTorch-07111F?style=for-the-badge&logo=pytorch&logoColor=E8B4CA" alt="PyTorch">
+  <img src="https://img.shields.io/badge/Hugging%20Face-07111F?style=for-the-badge&logo=huggingface&logoColor=F4C95D" alt="Hugging Face">
+  <img src="https://img.shields.io/badge/TypeScript-07111F?style=for-the-badge&logo=typescript&logoColor=93D8E8" alt="TypeScript">
+  <img src="https://img.shields.io/badge/React-07111F?style=for-the-badge&logo=react&logoColor=E8B4CA" alt="React">
+</p>
 
-| Strategy | General validation PPL | Target validation PPL | Forgetting |
-| --- | ---: | ---: | ---: |
-| Sequential | 4,474.44 | 7,534.90 | -0.5731 |
-| Reservoir replay | 4,217.56 | 7,358.84 | -0.6322 |
-| Joint-training reference | 4,258.46 | 7,433.48 | -0.6226 |
+<details>
+  <summary><strong>Engineering detail</strong> &mdash; the tools behind the work</summary>
+  <br>
+  <table>
+    <tr><td><strong>AI / ML</strong></td><td>JAX, Flax, Optax, PyTorch, Transformers, Qwen, NLP, generative AI, causal Transformers</td></tr>
+    <tr><td><strong>Evaluation</strong></td><td>Braintrust, golden datasets, order swaps, Wilson intervals, Cohen's kappa, stress tests</td></tr>
+    <tr><td><strong>Software</strong></td><td>Python, TypeScript, React, Pydantic, Typer, pytest, MyPy, Ruff, Vite, JSONL</td></tr>
+    <tr><td><strong>Enterprise</strong></td><td>SAP, ABAP, functional analysis, requirements, debugging, testing, documentation</td></tr>
+  </table>
+</details>
 
-Forgetting is defined as `L_general,t - L_general,0`. The first run did not enter a forgetting regime: general-domain loss decreased during adaptation for every strategy. I kept that result because it identified a limitation in the setup rather than supporting a stronger conclusion than the experiment justified. The base model is small and undertrained, and the next useful experiment would use longer pretraining or a more separated target domain.
+<details>
+  <summary><strong>Other builds</strong> &mdash; beyond the main research thread</summary>
+  <br>
+  <ul>
+    <li><a href="https://github.com/ruimiguelyo/splitfx"><strong>SplitFX</strong></a> &mdash; explainable cross-currency settlements built with React and TypeScript.</li>
+    <li><a href="https://github.com/ruimiguelyo/candidaturas-ai-scraper"><strong>Candidaturas AI Scraper</strong></a> &mdash; a local, transparent job-search workflow that exports deduplicated results.</li>
+  </ul>
+</details>
 
-The tiny overfit test reduced loss from `2.0787` to `0.0009`. General-domain validation perplexity fell from `51,075.04` at initialization to `7,936.39` after the checkpoint was resumed to step 110.
+<details>
+  <summary><strong>Live GitHub signal</strong> &mdash; updated from public activity</summary>
+  <br>
+  <p align="center">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=ruimiguelyo&amp;theme=github_dark&amp;hide_border=true&amp;bg_color=00000000&amp;title_color=E8B4CA&amp;text_color=CBD5E1&amp;icon_color=93D8E8">
+      <source media="(prefers-color-scheme: light)" srcset="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=ruimiguelyo&amp;theme=default&amp;hide_border=true&amp;bg_color=00000000&amp;title_color=9B496A&amp;text_color=334155&amp;icon_color=167B8F">
+      <img src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=ruimiguelyo&amp;theme=github_dark&amp;hide_border=true&amp;bg_color=00000000&amp;title_color=E8B4CA&amp;text_color=CBD5E1&amp;icon_color=93D8E8" alt="Rui's GitHub public activity summary" width="49%">
+    </picture>
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=ruimiguelyo&amp;theme=github_dark&amp;hide_border=true&amp;bg_color=00000000&amp;title_color=E8B4CA&amp;text_color=CBD5E1&amp;icon_color=93D8E8">
+      <source media="(prefers-color-scheme: light)" srcset="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=ruimiguelyo&amp;theme=default&amp;hide_border=true&amp;bg_color=00000000&amp;title_color=9B496A&amp;text_color=334155&amp;icon_color=167B8F">
+      <img src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=ruimiguelyo&amp;theme=github_dark&amp;hide_border=true&amp;bg_color=00000000&amp;title_color=E8B4CA&amp;text_color=CBD5E1&amp;icon_color=93D8E8" alt="Rui's public repositories by language" width="49%">
+    </picture>
+  </p>
+  <p align="center"><sub>Public activity only. The project metrics above are the signal I use to describe the work.</sub></p>
+</details>
 
-### Reproducibility
+<h2 id="contact">Let's build something measurable</h2>
 
-- The configuration, seed, environment, hardware backend, metrics, and generated figures are stored with the recorded results.
-- Raw datasets and checkpoints are not committed. Download and training commands are documented in the repository README.
-- The project has 10 automated tests and passes `ruff check .`.
-- The current environment did not provide an appropriate BF16 accelerator, so no BF16, CUDA, TPU, or distributed-training result is claimed.
+<p>
+  I am interested in ML/AI engineering roles and collaborations where software quality, model behaviour and evaluation matter. If you are working on reliable AI, language models, evaluation or agents, I would be glad to compare notes.
+</p>
 
-## Technical resources
+<p align="center">
+  <a href="mailto:ruimiguelsa.stb@gmail.com"><strong>email</strong></a> &nbsp;&middot;&nbsp;
+  <a href="https://www.linkedin.com/in/rui-s%C3%A1-1243162ab/"><strong>LinkedIn</strong></a> &nbsp;&middot;&nbsp;
+  <a href="https://github.com/ruimiguelyo"><strong>GitHub</strong></a>
+</p>
 
-These papers, tutorials, and documentation were useful while implementing and checking the project:
-
-- [Attention Is All You Need](https://arxiv.org/abs/1706.03762) for the Transformer formulation.
-- [The Annotated Transformer](https://nlp.seas.harvard.edu/annotated-transformer/) for a readable implementation reference.
-- [JAX documentation](https://docs.jax.dev/en/latest/) for transformations, arrays, and the execution model.
-- [JAX asynchronous dispatch](https://docs.jax.dev/en/latest/async_dispatch.html) for synchronizing the precision benchmark before measuring elapsed time.
-- [Flax documentation](https://flax.readthedocs.io/en/latest/) for Linen modules and training state structure.
-- [Optax documentation](https://optax.readthedocs.io/en/latest/) for schedules, AdamW, and gradient clipping.
-- [Hugging Face Datasets documentation](https://huggingface.co/docs/datasets/) for local dataset preparation and split handling.
-- [Don't Stop Pretraining](https://arxiv.org/abs/2004.10964) for the motivation behind domain-adaptive pretraining.
-- [Random Sampling with a Reservoir](https://doi.org/10.1145/3147.3165) for the reservoir-sampling algorithm.
-- [WikiText dataset card](https://huggingface.co/datasets/Salesforce/wikitext) and [AG News dataset card](https://huggingface.co/datasets/fancyzhx/ag_news) for data provenance and usage limitations.
-
-## Previous project: JudgeShift CX
-
-[Read JudgeShift CX](https://github.com/ruimiguelyo/judgeshift-cx)
-
-JudgeShift CX grew out of a practical question from running an Etsy store: if an AI system eventually helps answer customer messages, how do I know which generated responses are safe and useful enough to send? I built a bilingual evaluation bench comparing LLM judges, position sensitivity, and targeted stress tests.
-
-The project taught me to investigate suspiciously good metrics instead of treating them as success. A length heuristic initially reached perfect agreement because the preferred responses were longer; after padding the losing responses, it collapsed to 0%. That experience led directly to the emphasis on controlled comparisons and negative results in the JAX language-model project.
-
-## Professional background
-
-### Deloitte - Developer, SAP ABAP and Functional Analysis
-
-**October 2021 - March 2026 - Portugal - Hybrid - Full-time**
-
-- I developed and maintained enterprise SAP solutions in ABAP from functional requirements.
-- I worked across technical development and functional analysis, debugging, testing, documentation, and validation.
-- I investigated incidents and defects through root-cause analysis.
-- I collaborated with multidisciplinary teams throughout structured delivery cycles.
-
-## What I am focusing on now
-
-- Language-model training and evaluation.
-- Continual learning, NLP, and AI agents.
-- Reproducible experiments with measurable behaviour and explicit limitations.
-- Combining enterprise software experience with hands-on machine-learning engineering.
-
-## Education
-
-- BSc in Computer Engineering, Polytechnic Institute of Setubal, expected 2027.
-- CTeSP in Software Engineering, Polytechnic Institute of Setubal, 2023.
-
-## Contact
-
-[LinkedIn](https://www.linkedin.com/in/rui-s%C3%A1-1243162ab/)
+<p align="center"><sub>Profile README / maintained as a living lab notebook.</sub></p>

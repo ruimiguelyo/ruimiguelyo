@@ -1,0 +1,45 @@
+<svg width="1400" height="248" viewBox="0 0 1400 248" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="panel" x1="0" y1="0" x2="1400" y2="248" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#07111F"/>
+      <stop offset="1" stop-color="#111827"/>
+    </linearGradient>
+    <linearGradient id="line" x1="160" y1="124" x2="1240" y2="124" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#93D8E8"/>
+      <stop offset="0.5" stop-color="#E8B4CA"/>
+      <stop offset="1" stop-color="#F4C95D"/>
+    </linearGradient>
+  </defs>
+
+  <rect x="1" y="1" width="1398" height="246" rx="22" fill="url(#panel)" stroke="#CBD5E1" stroke-opacity="0.2"/>
+  <text x="42" y="42" fill="#93D8E8" font-family="ui-monospace,SFMono-Regular,Consolas,monospace" font-size="13" font-weight="700" letter-spacing="2">THE LOOP / HOW I WORK</text>
+  <text x="42" y="73" fill="#F8FAFC" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" font-weight="600">Good AI work is a loop, not a demo.</text>
+
+  <path d="M180 145H1224" stroke="url(#line)" stroke-width="3" stroke-linecap="round"/>
+  <path d="M1212 135L1225 145L1212 155" stroke="#F4C95D" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <g transform="translate(120 107)">
+    <circle cx="0" cy="38" r="30" fill="#93D8E8" fill-opacity="0.14" stroke="#93D8E8"/>
+    <text x="0" y="44" text-anchor="middle" fill="#93D8E8" font-family="ui-monospace,SFMono-Regular,Consolas,monospace" font-size="18" font-weight="700">01</text>
+    <text x="0" y="91" text-anchor="middle" fill="#F8FAFC" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="700">QUESTION</text>
+    <text x="0" y="113" text-anchor="middle" fill="#CBD5E1" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="12">name the uncertainty</text>
+  </g>
+  <g transform="translate(470 107)">
+    <circle cx="0" cy="38" r="30" fill="#E8B4CA" fill-opacity="0.14" stroke="#E8B4CA"/>
+    <text x="0" y="44" text-anchor="middle" fill="#E8B4CA" font-family="ui-monospace,SFMono-Regular,Consolas,monospace" font-size="18" font-weight="700">02</text>
+    <text x="0" y="91" text-anchor="middle" fill="#F8FAFC" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="700">CONTROL</text>
+    <text x="0" y="113" text-anchor="middle" fill="#CBD5E1" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="12">make the comparison fair</text>
+  </g>
+  <g transform="translate(820 107)">
+    <circle cx="0" cy="38" r="30" fill="#F4C95D" fill-opacity="0.14" stroke="#F4C95D"/>
+    <text x="0" y="44" text-anchor="middle" fill="#F4C95D" font-family="ui-monospace,SFMono-Regular,Consolas,monospace" font-size="18" font-weight="700">03</text>
+    <text x="0" y="91" text-anchor="middle" fill="#F8FAFC" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="700">MEASURE</text>
+    <text x="0" y="113" text-anchor="middle" fill="#CBD5E1" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="12">look past the headline score</text>
+  </g>
+  <g transform="translate(1170 107)">
+    <circle cx="0" cy="38" r="30" fill="#93D8E8" fill-opacity="0.14" stroke="#93D8E8"/>
+    <text x="0" y="44" text-anchor="middle" fill="#93D8E8" font-family="ui-monospace,SFMono-Regular,Consolas,monospace" font-size="18" font-weight="700">04</text>
+    <text x="0" y="91" text-anchor="middle" fill="#F8FAFC" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="700">DOCUMENT</text>
+    <text x="0" y="113" text-anchor="middle" fill="#CBD5E1" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="12">keep the limits visible</text>
+  </g>
+</svg>
