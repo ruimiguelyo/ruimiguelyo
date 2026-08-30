@@ -1,168 +1,161 @@
 <p align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="./assets/profile-header.svg">
-    <source media="(prefers-color-scheme: light)" srcset="./assets/profile-header.svg">
-  <img src="./assets/profile-header.svg" alt="Rui Sá - AI engineering, LLM evaluation and reliable systems" width="100%">
+    <source media="(max-width: 600px) and (prefers-color-scheme: dark)" srcset="./assets/hero-mobile-dark.svg">
+    <source media="(max-width: 600px) and (prefers-color-scheme: light)" srcset="./assets/hero-mobile-light.svg">
+    <source media="(prefers-color-scheme: dark)" srcset="./assets/hero-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="./assets/hero-light.svg">
+    <img src="./assets/hero-light.svg" alt="Rui Sá - Computer Engineering, software systems, AI and enterprise delivery" width="100%">
   </picture>
 </p>
 
 <p align="center">
-  <a href="https://www.linkedin.com/in/rui-s%C3%A1-1243162ab/"><img src="https://img.shields.io/badge/LinkedIn-connect-0B1627?style=for-the-badge&logo=linkedin&logoColor=F8FAFC&labelColor=E8B4CA" alt="Connect on LinkedIn"></a>
-  <a href="mailto:ruimiguelsa.stb@gmail.com"><img src="https://img.shields.io/badge/Email-say%20hello-0B1627?style=for-the-badge&logo=gmail&logoColor=F8FAFC&labelColor=93D8E8" alt="Send Rui an email"></a>
-  <a href="https://github.com/ruimiguelyo"><img src="https://img.shields.io/badge/GitHub-ruimiguelyo-0B1627?style=for-the-badge&logo=github&logoColor=F8FAFC&labelColor=F4C95D" alt="Rui's GitHub profile"></a>
+  <a href="https://ruimiguelyo.github.io/judgeshift-cx/"><strong>LIVE PROJECT ↗</strong></a>
+  &nbsp;&nbsp;·&nbsp;&nbsp;
+  <a href="https://www.linkedin.com/in/rui-s%C3%A1-1243162ab/"><strong>LINKEDIN ↗</strong></a>
+  &nbsp;&nbsp;·&nbsp;&nbsp;
+  <a href="mailto:ruimiguelsa.stb@gmail.com"><strong>EMAIL ↗</strong></a>
 </p>
 
 <p align="center">
-  <a href="#what-i-build">what I build</a> &nbsp;&middot;&nbsp;
-  <a href="#featured-work">featured work</a> &nbsp;&middot;&nbsp;
-  <a href="#toolbox">toolbox</a> &nbsp;&middot;&nbsp;
-  <a href="#contact">contact</a>
+  <a href="#user-content-selected-systems">selected systems</a> &nbsp;·&nbsp;
+  <a href="#user-content-engineering-range">engineering range</a> &nbsp;·&nbsp;
+  <a href="#user-content-enterprise-foundation">enterprise foundation</a> &nbsp;·&nbsp;
+  <a href="#user-content-lets-talk">contact</a>
 </p>
 
-<h2 id="what-i-build">A bridge between enterprise software and inspectable AI</h2>
+## I build reliable software across product, AI and enterprise systems.
 
-<p>
-  I am <strong>Rui Sá</strong>, a Computer Engineering student in Setúbal, Portugal, moving deliberately into AI Engineering. I spent 4.5 years at Deloitte building and debugging SAP/ABAP systems, and I now apply that same discipline to language models: define the question, control the comparison, measure the behaviour, and document the limits.
-</p>
+I am **Rui Sá**, a software developer and Computer Engineering student in Setúbal, Portugal. I spent 4.5 years full-time at Deloitte Portugal across SAP ABAP development and functional consulting, then carried that enterprise discipline into hands-on software and AI/ML projects.
 
-<blockquote>
-  <strong>I build AI systems that can be inspected from the metric to the mechanism.</strong>
-</blockquote>
+That range is the point: I can move from business requirements and incident investigation to Python pipelines, TypeScript interfaces and language-model experiments while keeping tests, measurement and documentation visible.
+
+> **My edge is turning ambiguous systems into work that can be inspected, reproduced and explained.**
 
 <table>
   <tr>
-    <td align="center" width="25%"><strong>4.5 years</strong><br><sub>enterprise software</sub></td>
-    <td align="center" width="25%"><strong>3.3M</strong><br><sub>model parameters</sub></td>
-    <td align="center" width="25%"><strong>36 cases</strong><br><sub>bilingual evaluation set</sub></td>
-    <td align="center" width="25%"><strong>10 tests</strong><br><sub>JAX lab checks</sub></td>
+    <td width="50%"><strong>4.5 years</strong><br><sub>full-time enterprise software at Deloitte</sub></td>
+    <td width="50%"><strong>36 evaluation cases</strong><br><sub>18 bilingual pairs in JudgeShift CX</sub></td>
   </tr>
-</table>
-
-<p align="center">
-  <img src="./assets/research-loop.svg" alt="Rui's method: question, control, measure and document" width="100%">
-</p>
-
-<h2 id="featured-work">Featured work</h2>
-
-<table>
   <tr>
-    <td valign="top" width="50%">
-      <h3><a href="https://github.com/ruimiguelyo/jax-language-model-lab">JAX Language Model Lab</a></h3>
-      <p><strong>Decoder-only Transformer &middot; continual pretraining</strong></p>
-      <p>A small language-model training stack built from the mechanism up instead of hiding behind a pretrained API. It compares sequential adaptation, reservoir replay and a joint-training reference under a fixed token budget.</p>
-      <p>
-        <img src="https://img.shields.io/badge/JAX-07111F?style=flat-square&logo=google&logoColor=93D8E8" alt="JAX">
-        <img src="https://img.shields.io/badge/Flax-07111F?style=flat-square&logo=google&logoColor=E8B4CA" alt="Flax">
-        <img src="https://img.shields.io/badge/Optax-07111F?style=flat-square&logoColor=F4C95D" alt="Optax">
-        <img src="https://img.shields.io/badge/Python-07111F?style=flat-square&logo=python&logoColor=F4C95D" alt="Python">
-      </p>
-      <p><a href="https://github.com/ruimiguelyo/jax-language-model-lab">source code&nbsp;↗</a> &nbsp; <a href="https://github.com/ruimiguelyo/jax-language-model-lab/blob/main/README.md#results">results&nbsp;↗</a></p>
-    </td>
-    <td valign="top" width="50%">
-      <h3><a href="https://github.com/ruimiguelyo/judgeshift-cx">JudgeShift CX</a></h3>
-      <p><strong>LLM-as-a-judge evaluation platform</strong></p>
-      <p>A bilingual benchmark and dashboard for testing whether LLM judges can be trusted. It makes order sensitivity, confidence, coverage, cross-language consistency and failure modes visible instead of reducing them to one headline score.</p>
-      <p>
-        <img src="https://img.shields.io/badge/Python-07111F?style=flat-square&logo=python&logoColor=F4C95D" alt="Python">
-        <img src="https://img.shields.io/badge/TypeScript-07111F?style=flat-square&logo=typescript&logoColor=93D8E8" alt="TypeScript">
-        <img src="https://img.shields.io/badge/React-07111F?style=flat-square&logo=react&logoColor=E8B4CA" alt="React">
-        <img src="https://img.shields.io/badge/Braintrust-07111F?style=flat-square&logoColor=F4C95D" alt="Braintrust">
-      </p>
-      <p><a href="https://ruimiguelyo.github.io/judgeshift-cx/">live dashboard&nbsp;↗</a> &nbsp; <a href="https://github.com/ruimiguelyo/judgeshift-cx/releases/tag/v0.1.0">v0.1.0 study&nbsp;↗</a></p>
-    </td>
+    <td width="50%"><strong>20,480 tokens</strong><br><sub>controlled continual-pretraining experiment</sub></td>
+    <td width="50%"><strong>144 ECTS</strong><br><sub>completed in Computer Engineering</sub></td>
   </tr>
 </table>
 
+<h2 id="selected-systems">Selected systems</h2>
+
 <p align="center">
-  <a href="https://github.com/ruimiguelyo/jax-language-model-lab">
-    <img src="https://raw.githubusercontent.com/ruimiguelyo/jax-language-model-lab/main/results/continual/figures/general_perplexity.png" alt="General-domain validation perplexity for the JAX continual-pretraining experiment" width="82%">
+  <a href="https://ruimiguelyo.github.io/judgeshift-cx/">
+    <img src="./assets/judgeshift-cx-preview.png" alt="JudgeShift CX live dashboard showing a reproducible bilingual LLM-judge experiment" width="100%">
   </a>
-  <br>
-  <sub>One recorded experiment, one CPU device, one seed: the chart stays because honest limitations are part of the result.</sub>
 </p>
 
-<h2>What I am working on</h2>
+### 01 / [JudgeShift CX](https://github.com/ruimiguelyo/judgeshift-cx)
 
-<table>
-  <tr>
-    <td valign="top" width="50%">
-      <h3>Now / 2026</h3>
-      <ul>
-        <li>Language-model training, evaluation and continual learning.</li>
-        <li>LLM agents with explicit measurements and useful abstention.</li>
-        <li>Reproducible experiments where negative results are still informative.</li>
-      </ul>
-    </td>
-    <td valign="top" width="50%">
-      <h3>Before / 2021&ndash;2026</h3>
-      <ul>
-        <li>Developer at Deloitte working with SAP and ABAP.</li>
-        <li>Functional analysis, requirements, debugging and root-cause work.</li>
-        <li>Testing, technical documentation and multidisciplinary delivery.</li>
-      </ul>
-    </td>
-  </tr>
-</table>
+`Python` `TypeScript` `React` `Braintrust` `Qwen`
 
-<h2 id="toolbox">Toolbox</h2>
+A bilingual LLM-as-a-judge evaluation platform built to test when automated judges can be trusted - and when they should abstain. I created a traceable 36-case golden dataset, four judge strategies, reversed A/B order, agreement and coverage metrics, Wilson intervals, Cohen's kappa, parser repairs and cross-language checks.
+
+**Engineering signal:** in a verbosity stress test, a length baseline fell from 100% to 0% agreement while the rubric judge retained 97.2%.
+
+[Live dashboard ↗](https://ruimiguelyo.github.io/judgeshift-cx/) · [Source ↗](https://github.com/ruimiguelyo/judgeshift-cx) · [Methodology ↗](https://github.com/ruimiguelyo/judgeshift-cx/blob/main/docs/METHODOLOGY.md) · [v0.1.0 study ↗](https://github.com/ruimiguelyo/judgeshift-cx/releases/tag/v0.1.0)
+
+---
+
+### 02 / [JAX Language Model Lab](https://github.com/ruimiguelyo/jax-language-model-lab)
+
+`Python` `JAX` `Flax` `Optax` `Transformers`
+
+A decoder-only Transformer and training stack built from the mechanism up: causal attention, tied embeddings, JIT-compiled training, masked perplexity, checkpoints and automated tests. The continual-pretraining study compares sequential adaptation, Algorithm R reservoir replay and joint training under the same token budget.
+
+**Engineering signal:** 3,320,128 parameters, a 20,480-token adaptation budget and explicit measurements of target learning, general-domain retention and forgetting.
+
+[Live results ↗](https://jax-language-model-lab.pages.dev/) · [Source ↗](https://github.com/ruimiguelyo/jax-language-model-lab) · [Results ↗](https://github.com/ruimiguelyo/jax-language-model-lab/blob/main/README.md#results) · [Reproduce the runs ↗](https://github.com/ruimiguelyo/jax-language-model-lab/blob/main/README.md#reproducing-the-runs)
+
+---
+
+### 03 / [SplitFX](https://github.com/ruimiguelyo/splitfx)
+
+`TypeScript` `React` `Redux Toolkit` `Jest` `Cypress`
+
+An explainable cross-currency settlement app designed around the details quick demos usually hide: money stored in minor units, derived balances, predictable settlement rules, awkward UI states, accessibility and end-to-end browser journeys.
+
+**Engineering signal:** strict TypeScript, unit and end-to-end tests, GitHub Actions and architecture decisions documented beside the code.
+
+[Live app ↗](https://ruimiguelyo.github.io/splitfx/) · [Source ↗](https://github.com/ruimiguelyo/splitfx) · [Architecture ↗](https://github.com/ruimiguelyo/splitfx/tree/main/docs/architecture)
+
+---
+
+### 04 / [Candidaturas AI Scraper](https://github.com/ruimiguelyo/candidaturas-ai-scraper)
+
+`Python` `Pydantic` `AsyncIO` `GitHub Actions` `CSV / JSON`
+
+An evidence-first job-search workflow that searches multiple sources, deduplicates roles, explains filtering decisions and exports privacy-conscious results. It is built as a practical data pipeline rather than a black-box recommendation feed.
+
+**Engineering signal:** automated tests cover business rules, pagination, partial failures, privacy-safe exports, CSV formula injection and digest generation; CI and the daily workflow run on GitHub Actions.
+
+[Source ↗](https://github.com/ruimiguelyo/candidaturas-ai-scraper) · [Latest Actions ↗](https://github.com/ruimiguelyo/candidaturas-ai-scraper/actions)
+
+<h2 id="engineering-range">Engineering range</h2>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Python-07111F?style=for-the-badge&logo=python&logoColor=F4C95D" alt="Python">
-  <img src="https://img.shields.io/badge/JAX-07111F?style=for-the-badge&logo=google&logoColor=93D8E8" alt="JAX">
-  <img src="https://img.shields.io/badge/PyTorch-07111F?style=for-the-badge&logo=pytorch&logoColor=E8B4CA" alt="PyTorch">
-  <img src="https://img.shields.io/badge/Hugging%20Face-07111F?style=for-the-badge&logo=huggingface&logoColor=F4C95D" alt="Hugging Face">
-  <img src="https://img.shields.io/badge/TypeScript-07111F?style=for-the-badge&logo=typescript&logoColor=93D8E8" alt="TypeScript">
-  <img src="https://img.shields.io/badge/React-07111F?style=for-the-badge&logo=react&logoColor=E8B4CA" alt="React">
+  <picture>
+    <source media="(max-width: 600px) and (prefers-color-scheme: dark)" srcset="./assets/stack-mobile-dark.svg">
+    <source media="(max-width: 600px) and (prefers-color-scheme: light)" srcset="./assets/stack-mobile-light.svg">
+    <source media="(prefers-color-scheme: dark)" srcset="./assets/stack-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="./assets/stack-light.svg">
+    <img src="./assets/stack-light.svg" alt="Rui's engineering range: software systems, AI and ML, and enterprise SAP, all grounded in requirements, debugging, testing and documentation" width="100%">
+  </picture>
 </p>
 
 <details>
-  <summary><strong>Engineering detail</strong> &mdash; the tools behind the work</summary>
+  <summary><strong>Open the full technical index</strong></summary>
   <br>
   <table>
-    <tr><td><strong>AI / ML</strong></td><td>JAX, Flax, Optax, PyTorch, Transformers, Qwen, NLP, generative AI, causal Transformers</td></tr>
-    <tr><td><strong>Evaluation</strong></td><td>Braintrust, golden datasets, order swaps, Wilson intervals, Cohen's kappa, stress tests</td></tr>
-    <tr><td><strong>Software</strong></td><td>Python, TypeScript, React, Pydantic, Typer, pytest, MyPy, Ruff, Vite, JSONL</td></tr>
-    <tr><td><strong>Enterprise</strong></td><td>SAP, ABAP, functional analysis, requirements, debugging, testing, documentation</td></tr>
+    <tr><th scope="row">Languages</th><td>Python, TypeScript/JavaScript, ABAP, SQL, Java, HTML/CSS</td></tr>
+    <tr><th scope="row">AI / ML</th><td>JAX, Flax, Optax, PyTorch, Hugging Face Transformers, Qwen, causal Transformers, continual pretraining, reservoir replay, LLM evaluation</td></tr>
+    <tr><th scope="row">Product engineering</th><td>React, Redux Toolkit, Pydantic, Typer, Vite, JSON/JSONL, accessible UI, domain modelling</td></tr>
+    <tr><th scope="row">Quality</th><td>pytest, Jest, Cypress, MyPy, Ruff, GitHub Actions, reproducible runs, test documentation</td></tr>
+    <tr><th scope="row">Enterprise</th><td>SAP FI/CO, SD/MM, MM/SRM, ABAP development, debugging, requirements analysis, impact assessment</td></tr>
   </table>
 </details>
 
-<details>
-  <summary><strong>Other builds</strong> &mdash; beyond the main research thread</summary>
-  <br>
-  <ul>
-    <li><a href="https://github.com/ruimiguelyo/splitfx"><strong>SplitFX</strong></a> &mdash; explainable cross-currency settlements built with React and TypeScript.</li>
-    <li><a href="https://github.com/ruimiguelyo/candidaturas-ai-scraper"><strong>Candidaturas AI Scraper</strong></a> &mdash; a local, transparent job-search workflow that exports deduplicated results.</li>
-  </ul>
-</details>
+<h2 id="enterprise-foundation">Enterprise foundation</h2>
+
+At Deloitte, software was never just code: it had billing, finance, purchasing, users, incidents, tests, risks and deadlines attached. That experience is the engineering foundation I bring to every stack.
+
+**Deloitte Portugal** · SAP ABAP Developer & Functional Consultant · **Oct 2021 - Mar 2026**
+
+- Developed and maintained ABAP solutions from functional requirements and business needs.
+- Worked across FI/CO and SD/MM billing and financial integration, plus MM/SRM purchasing processes.
+- Investigated incidents through functional analysis, debugging and root-cause analysis.
+- Assessed change impact, tested solutions, documented decisions and communicated delivery risks across multidisciplinary teams.
 
 <details>
-  <summary><strong>Live GitHub signal</strong> &mdash; updated from public activity</summary>
+  <summary><strong>Education and current trajectory</strong></summary>
   <br>
-  <p align="center">
-    <picture>
-      <source media="(prefers-color-scheme: dark)" srcset="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=ruimiguelyo&amp;theme=github_dark&amp;hide_border=true&amp;bg_color=00000000&amp;title_color=E8B4CA&amp;text_color=CBD5E1&amp;icon_color=93D8E8">
-      <source media="(prefers-color-scheme: light)" srcset="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=ruimiguelyo&amp;theme=default&amp;hide_border=true&amp;bg_color=00000000&amp;title_color=9B496A&amp;text_color=334155&amp;icon_color=167B8F">
-      <img src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=ruimiguelyo&amp;theme=github_dark&amp;hide_border=true&amp;bg_color=00000000&amp;title_color=E8B4CA&amp;text_color=CBD5E1&amp;icon_color=93D8E8" alt="Rui's GitHub public activity summary" width="49%">
-    </picture>
-    <picture>
-      <source media="(prefers-color-scheme: dark)" srcset="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=ruimiguelyo&amp;theme=github_dark&amp;hide_border=true&amp;bg_color=00000000&amp;title_color=E8B4CA&amp;text_color=CBD5E1&amp;icon_color=93D8E8">
-      <source media="(prefers-color-scheme: light)" srcset="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=ruimiguelyo&amp;theme=default&amp;hide_border=true&amp;bg_color=00000000&amp;title_color=9B496A&amp;text_color=334155&amp;icon_color=167B8F">
-      <img src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=ruimiguelyo&amp;theme=github_dark&amp;hide_border=true&amp;bg_color=00000000&amp;title_color=E8B4CA&amp;text_color=CBD5E1&amp;icon_color=93D8E8" alt="Rui's public repositories by language" width="49%">
-    </picture>
-  </p>
-  <p align="center"><sub>Public activity only. The project metrics above are the signal I use to describe the work.</sub></p>
+  <p><strong>BSc in Computer Engineering · Polytechnic Institute of Setúbal · expected 2027</strong><br>
+  144 ECTS completed with a current average of 14/20. Current work includes Python, machine learning and data, NLP/generative AI and computer vision.</p>
+  <p><strong>CTeSP in Software Engineering · Polytechnic Institute of Setúbal · completed 2023</strong><br>
+  120 ECTS completed with a final average of 15/20, including Java, JavaScript, Python and SQL.</p>
 </details>
 
-<h2 id="contact">Let's build something measurable</h2>
+## How I work
 
-<p>
-  I am interested in ML/AI engineering roles and collaborations where software quality, model behaviour and evaluation matter. If you are working on reliable AI, language models, evaluation or agents, I would be glad to compare notes.
-</p>
+**Understand the system → make assumptions explicit → build the smallest honest solution → test the edges → document what remains.**
+
+That loop is the common thread between enterprise incidents, product code and model experiments.
+
+<h2 id="lets-talk">Let's talk</h2>
+
+I am interested in software engineering and AI systems work where reliability, model behaviour and clear technical decisions matter. If that sounds like your kind of problem, I would be glad to compare notes.
 
 <p align="center">
-  <a href="mailto:ruimiguelsa.stb@gmail.com"><strong>email</strong></a> &nbsp;&middot;&nbsp;
-  <a href="https://www.linkedin.com/in/rui-s%C3%A1-1243162ab/"><strong>LinkedIn</strong></a> &nbsp;&middot;&nbsp;
-  <a href="https://github.com/ruimiguelyo"><strong>GitHub</strong></a>
+  <a href="mailto:ruimiguelsa.stb@gmail.com"><strong>EMAIL</strong></a>
+  &nbsp;&nbsp;·&nbsp;&nbsp;
+  <a href="https://www.linkedin.com/in/rui-s%C3%A1-1243162ab/"><strong>LINKEDIN</strong></a>
+  &nbsp;&nbsp;·&nbsp;&nbsp;
+  <a href="https://github.com/ruimiguelyo?tab=repositories"><strong>ALL REPOSITORIES</strong></a>
 </p>
 
-<p align="center"><sub>Profile README / maintained as a living lab notebook.</sub></p>
+<p align="center"><sub>Setúbal, Portugal · engineering logbook maintained by Rui Sá</sub></p>
