@@ -84,18 +84,6 @@ An explainable cross-currency settlement app designed around the details quick d
 
 [Live app ↗](https://ruimiguelyo.github.io/splitfx/) · [Source ↗](https://github.com/ruimiguelyo/splitfx) · [Architecture ↗](https://github.com/ruimiguelyo/splitfx/tree/main/docs/architecture)
 
----
-
-### 04 / [Candidaturas AI Scraper](https://github.com/ruimiguelyo/candidaturas-ai-scraper)
-
-`Python` `Pydantic` `AsyncIO` `GitHub Actions` `CSV / JSON`
-
-An evidence-first job-search workflow that searches multiple sources, deduplicates roles, explains filtering decisions and exports privacy-conscious results. It is built as a practical data pipeline rather than a black-box recommendation feed.
-
-**Engineering signal:** automated tests cover business rules, pagination, partial failures, privacy-safe exports, CSV formula injection and digest generation; CI and the daily workflow run on GitHub Actions.
-
-[Source ↗](https://github.com/ruimiguelyo/candidaturas-ai-scraper) · [Latest Actions ↗](https://github.com/ruimiguelyo/candidaturas-ai-scraper/actions)
-
 <h2 id="engineering-range">Engineering range</h2>
 
 <p align="center">
