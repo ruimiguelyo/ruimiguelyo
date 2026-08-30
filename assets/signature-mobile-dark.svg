@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 220" role="img" aria-labelledby="title desc">
+  <title id="title">Rui Sá — Software Engineer</title>
+  <desc id="desc">A compact mobile typographic signature for Rui Sá.</desc>
+  <rect x="0" y="27" width="7" height="166" fill="#5B8CFF"/>
+  <text x="34" y="91" fill="#F0F6FC" font-family="Segoe UI,Arial,sans-serif" font-size="66" font-weight="800" letter-spacing="-2">RUI SÁ</text>
+  <text x="35" y="139" fill="#5B8CFF" font-family="ui-monospace,SFMono-Regular,Consolas,monospace" font-size="25" font-weight="700" letter-spacing="3">SOFTWARE ENGINEER</text>
+  <line x1="35" y1="161" x2="720" y2="161" stroke="#30363D" stroke-width="2"/>
+  <text x="35" y="190" fill="#8B949E" font-family="ui-monospace,SFMono-Regular,Consolas,monospace" font-size="21" font-weight="600" letter-spacing="1.5">BUILD / MEASURE / SHIP</text>
+</svg>
